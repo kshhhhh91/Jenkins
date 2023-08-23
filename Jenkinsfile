@@ -9,22 +9,22 @@ pipeline {
     stage('Checkout') {
       steps {
         git branch: 'main', 
-        url: '<URL>'
+        url: 'https://github.com/kshhhhh91/Jenkins.git'
       }
     }
     stage('Build') {
       steps {
-        sh '<COMMAND>'
+        sh 'mvn clean package -DskipTests'
       }
     }
     stage('Test') {
       steps {
-        sh '<COMMAND>'
+        sh 'mvn test'
       }
     }
     stage('Deploy') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: '<NAME>', url: '<URL>')], contextPath: null, war: 'path/to/war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', url: 'http://192.168.56.103:8080/')], contextPath: '/var/lib/jenkins/workspace/maven_project/', war: 'target/hello-world.war'
       }
     }
   }
