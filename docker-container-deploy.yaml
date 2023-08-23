@@ -5,7 +5,7 @@
   - name: Create & Start Container
     docker_container:
       name: myweb
-      image: "kshhhhh91/jenkins-ansible:{{ lookup('env','BUILD_NUMBER') }}"
+      image: "kshhhhh91/myweb:{{ lookup('env','BUILD_NUMBER') }}"
       state: started
       ports:
       - "80:8080"
