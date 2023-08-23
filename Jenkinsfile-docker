@@ -51,7 +51,7 @@ pipeline {
         docker { image 'docker:dind' }
       }
       steps {
-        sh 'docker -H tcp://192.168.56.104:2376 container run --detach --name myweb -p 80:8080 kshhhhh91/myweb:$BUILD_NUMBER'
+        sh 'docker -H tcp://192.168.56.104:2375 container run --detach --name myweb -p 80:8080 kshhhhh91/myweb:$BUILD_NUMBER'
       }
     }
   }
