@@ -69,9 +69,9 @@ spec:
     stage('Update K8s Manifests & Push') {
       environment {
         githubUser = 'kshhhhh91'
-        githubEmail = 'kshhhhh91@gmail.com
+        githubEmail = 'kshhhhh91@gmail.com'
         githubId = 'kshhhhh91'
-        githubRepo = 'argocd-practice
+        githubRepo = 'argocd-practice'
         githubURL = "https://github.com/${githubId}/${githubRepo}.git"
         dockerhubId = 'kshhhhh91'
         dockerhubRepo = 'myweb'
